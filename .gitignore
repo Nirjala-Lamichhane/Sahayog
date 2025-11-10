@@ -1,0 +1,37 @@
+# Dashboard files - To be handled by friend
+backend/src/controllers/dashboardController.js
+backend/src/routes/dashboardRoutes.js
+backend/src/services/dashboardService.js
+backend/testing/integration/payment.integration.test.js
+
+frontend/src/Pages/Dashboard.jsx
+frontend/src/Pages/DashboardActions.jsx
+frontend/src/Pages/DashboardAmbulance.jsx
+frontend/src/Pages/DashboardAppointments.jsx
+frontend/src/Pages/DashboardCalendar.jsx
+frontend/src/Pages/DashboardRatings.jsx
+frontend/src/Pages/DashboardReminders.jsx
+frontend/src/Pages/DashboardReports.jsx
+frontend/src/Pages/DashboardSidebar.jsx
+
+# Dependencies
+node_modules/
+.env
+.env.local
+.env.*.local
+
+# Build outputs
+dist/
+build/
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
