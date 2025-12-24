@@ -1,0 +1,510 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.book-appointment-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0d9488 0%, #14b8a6 50%, #06b6d4 100%);
+  padding: 20px 16px;
+}
+
+.appointment-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 28px;
+  color: white;
+}
+
+.appointment-header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.appointment-header .subtitle {
+  margin: 8px 0 0 0;
+  font-size: 16px;
+  opacity: 0.95;
+}
+
+.appointment-form-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.appointment-form {
+  background: white;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.form-section {
+  margin-bottom: 32px;
+}
+
+.form-section:last-of-type {
+  margin-bottom: 24px;
+}
+
+.form-section h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0d9488;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #0d9488;
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.1);
+}
+
+.form-group input.error,
+.form-group select.error,
+.form-group textarea.error {
+  border-color: #dc2626;
+  background-color: #fef2f2;
+}
+
+.form-group input.error:focus {
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.error-message {
+  display: block;
+  color: #dc2626;
+  font-size: 13px;
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+  font-family: inherit;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 14px 24px;
+  background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3);
+}
+
+.btn-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(13, 148, 136, 0.4);
+}
+
+.btn-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.status-chip {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.status-chip.pending {
+  background: #fef08a;
+  color: #92400e;
+}
+
+.status-chip.confirmed {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-chip.cancelled {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.appointment-info {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.info-card {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #0d9488;
+}
+
+.info-card h3 {
+  margin: 0 0 16px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0d9488;
+}
+
+.info-card ul {
+  margin: 0;
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.info-card li {
+  margin-bottom: 8px;
+  color: #4b5563;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.info-card li:last-child {
+  margin-bottom: 0;
+}
+
+.info-card p {
+  margin: 8px 0;
+  color: #4b5563;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.booking-details-section {
+  max-width: 1200px;
+  margin: 28px auto 0;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  padding: 20px;
+  color: white;
+  backdrop-filter: blur(4px);
+}
+
+.booking-details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.booking-details-header h2 {
+  margin: 4px 0;
+  font-size: 22px;
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.muted-text {
+  margin: 4px 0 0 0;
+  opacity: 0.85;
+}
+
+.ghost-link {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ghost-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.booking-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.booking-card {
+  background: white;
+  color: #0f172a;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.booking-card.skeleton,
+.booking-card.empty {
+  text-align: center;
+  color: #475569;
+  font-weight: 600;
+}
+
+.booking-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.booking-card h3 {
+  margin: 6px 0 2px;
+}
+
+.booking-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.booking-card .label {
+  margin: 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #475569;
+}
+
+.booking-card-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+  .appointment-form-wrapper {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .appointment-form {
+    padding: 24px;
+  }
+
+  .appointment-header h1 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .book-appointment-container {
+    padding: 16px 12px;
+  }
+
+  .appointment-header {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .appointment-header h1 {
+    font-size: 22px;
+  }
+
+  .appointment-header .subtitle {
+    font-size: 14px;
+  }
+
+  .appointment-form {
+    padding: 20px;
+  }
+
+  .form-section h2 {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group {
+    margin-bottom: 16px;
+  }
+
+  .form-group label {
+    font-size: 13px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 11px 12px;
+    font-size: 14px;
+  }
+
+  .btn-submit {
+    padding: 12px 16px;
+    font-size: 15px;
+  }
+
+  .info-card {
+    padding: 18px;
+  }
+
+  .info-card h3 {
+    font-size: 15px;
+  }
+
+  .booking-details-section {
+    padding: 16px;
+  }
+
+  .booking-details-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .booking-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .book-appointment-container {
+    padding: 12px 8px;
+    background: linear-gradient(135deg, #0d9488 0%, #14b8a6 50%, #06b6d4 100%);
+  }
+
+  .appointment-header {
+    gap: 8px;
+  }
+
+  .appointment-header h1 {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .appointment-header .subtitle {
+    font-size: 13px;
+    opacity: 0.9;
+  }
+
+  .appointment-form {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .form-section {
+    margin-bottom: 24px;
+  }
+
+  .form-section h2 {
+    font-size: 16px;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+  }
+
+  .form-group {
+    margin-bottom: 14px;
+  }
+
+  .form-group label {
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .form-group textarea {
+    min-height: 80px;
+  }
+
+  .form-row {
+    gap: 12px;
+  }
+
+  .btn-submit {
+    padding: 11px 16px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .appointment-info {
+    gap: 16px;
+  }
+
+  .info-card {
+    padding: 16px;
+    border-left-width: 3px;
+  }
+
+  .info-card h3 {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .info-card ul {
+    padding-left: 18px;
+  }
+
+  .info-card li {
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+
+  .info-card p {
+    font-size: 13px;
+  }
+
+  .error-message {
+    font-size: 12px;
+  }
+}
