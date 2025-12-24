@@ -1,0 +1,216 @@
+/* Ambulance Modal */
+.ambulance-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+}
+
+.ambulance-modal-content {
+  background: white;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.ambulance-modal-header {
+  background: linear-gradient(135deg, #ff4757 0%, #ff6348 100%);
+  color: white;
+  padding: 24px;
+  border-radius: 12px 12px 0 0;
+}
+
+.ambulance-modal-header h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+
+.ambulance-modal-header p {
+  font-size: 14px;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.ambulance-modal-body {
+  padding: 24px;
+}
+
+.ambulance-form-group {
+  margin-bottom: 20px;
+}
+
+.ambulance-form-group:last-of-type {
+  margin-bottom: 0;
+}
+
+.ambulance-form-group label {
+  display: block;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.ambulance-form-group input,
+.ambulance-form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.ambulance-form-group input:focus,
+.ambulance-form-group textarea:focus {
+  outline: none;
+  border-color: #ff4757;
+  box-shadow: 0 0 0 3px rgba(255, 71, 87, 0.1);
+}
+
+.ambulance-form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.ambulance-modal-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.btn-submit-ambulance {
+  flex: 1;
+  padding: 12px;
+  background: linear-gradient(135deg, #ff4757 0%, #ff6348 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.btn-submit-ambulance:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 71, 87, 0.4);
+}
+
+.btn-cancel-ambulance {
+  flex: 1;
+  padding: 12px;
+  background: #f1f5f9;
+  color: #1e293b;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.btn-cancel-ambulance:hover {
+  background: #e2e8f0;
+}
+
+.ambulance-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ambulance-modal-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.ambulance-info-box {
+  background: #fef3c7;
+  border-left: 4px solid #f59e0b;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 13px;
+  color: #92400e;
+}
+
+@media (max-width: 768px) {
+  .ambulance-modal-content {
+    max-width: 100%;
+  }
+
+  .ambulance-modal-header {
+    padding: 20px;
+  }
+
+  .ambulance-modal-header h2 {
+    font-size: 20px;
+  }
+
+  .ambulance-modal-body {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ambulance-modal-overlay {
+    padding: 12px;
+  }
+
+  .ambulance-modal-content {
+    max-height: 95vh;
+  }
+
+  .ambulance-modal-header {
+    padding: 16px;
+  }
+
+  .ambulance-modal-header h2 {
+    font-size: 18px;
+  }
+
+  .ambulance-modal-body {
+    padding: 16px;
+  }
+
+  .ambulance-form-group input,
+  .ambulance-form-group textarea {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .ambulance-form-group textarea {
+    min-height: 80px;
+  }
+
+  .ambulance-modal-actions {
+    flex-direction: column;
+  }
+
+  .btn-submit-ambulance,
+  .btn-cancel-ambulance {
+    width: 100%;
+  }
+}

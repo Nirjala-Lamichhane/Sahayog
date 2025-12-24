@@ -1,0 +1,233 @@
+/* Dashboard Actions */
+.dashboard-actions-container {
+  padding: 24px 16px;
+  background: linear-gradient(135deg, #f0f9ff 0%, #f0fdf4 100%);
+  min-height: 100vh;
+}
+
+.dashboard-actions-header {
+  max-width: 1200px;
+  margin: 0 auto 32px;
+}
+
+.dashboard-actions-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.dashboard-actions-header p {
+  font-size: 16px;
+  color: #64748b;
+  margin: 0;
+}
+
+.actions-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.action-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-top: 4px solid #667eea;
+  cursor: pointer;
+}
+
+.action-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(102, 126, 234, 0.15);
+}
+
+.action-card.booking {
+  border-top-color: #3b82f6;
+}
+
+.action-card.appointment {
+  border-top-color: #10b981;
+}
+
+.action-card.report {
+  border-top-color: #f59e0b;
+}
+
+.action-card.emergency {
+  border-top-color: #ef4444;
+}
+
+.action-icon {
+  font-size: 40px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.action-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 12px 0;
+}
+
+.action-card p {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0 0 16px 0;
+  line-height: 1.6;
+}
+
+.action-card-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.action-card-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.action-card.emergency .action-card-btn {
+  background: linear-gradient(135deg, #ff4757 0%, #ff6348 100%);
+}
+
+.action-card.emergency .action-card-btn:hover {
+  box-shadow: 0 4px 12px rgba(255, 71, 87, 0.4);
+}
+
+.action-card.appointment .action-card-btn {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.action-card.appointment .action-card-btn:hover {
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+}
+
+.recent-activity {
+  max-width: 1200px;
+  margin: 40px auto 0;
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.recent-activity h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 24px 0;
+}
+
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.activity-item {
+  padding: 16px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border-left: 3px solid #667eea;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.activity-item strong {
+  color: #1e293b;
+  display: block;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 768px) {
+  .dashboard-actions-header h1 {
+    font-size: 24px;
+  }
+
+  .actions-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+
+  .action-card {
+    padding: 20px;
+  }
+
+  .action-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .action-card h3 {
+    font-size: 18px;
+  }
+
+  .action-card p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-actions-container {
+    padding: 16px 12px;
+  }
+
+  .dashboard-actions-header h1 {
+    font-size: 20px;
+  }
+
+  .actions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .action-card {
+    padding: 16px;
+  }
+
+  .action-icon {
+    font-size: 28px;
+  }
+
+  .action-card h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .action-card p {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+
+  .action-card-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .recent-activity {
+    margin-top: 24px;
+    padding: 16px;
+  }
+
+  .recent-activity h2 {
+    font-size: 18px;
+  }
+
+  .activity-item {
+    padding: 12px;
+    font-size: 12px;
+  }
+}

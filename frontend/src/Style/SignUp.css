@@ -1,0 +1,340 @@
+/* Legacy styles kept for reference
+.google-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: -10px;
+}
+
+.google-logo p {
+  font-size: 14px;
+  color: #7a7a7a;
+  margin: 0;
+}
+
+.google-img {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #d4d4d4;
+  border-radius: 8px;
+  padding: 12px 0;
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+}
+
+.google-img:hover {
+  background: #f4f4f4;
+}
+
+.google-img p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.google-img img {
+  width: 40px;
+  height: 30px;
+  object-fit: contain;
+}
+*/
+
+/* Container with background */
+.container {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(135deg, rgba(13, 148, 136, 0.4) 0%, rgba(5, 150, 105, 0.5) 100%),
+                    url('https://images.unsplash.com/photo-1579154204601-01d6f5a1c59f?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* SPLIT LAYOUT */
+.auth-container {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(135deg, rgba(13, 148, 136, 0.5) 0%, rgba(5, 150, 105, 0.6) 100%),
+                    url('https://images.unsplash.com/photo-1587854692152-cbe660dbde0e?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  padding: 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-left-panel {
+  flex: 0 0 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.auth-illustration {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  max-width: 350px;
+  max-height: 500px;
+}
+
+.auth-right-panel {
+  flex: 0 0 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(13, 148, 136, 0.95);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.auth-right-panel form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Form styling */
+.container form {
+  background: linear-gradient(135deg, #0d9488 0%, #14b8a6 50%, #06b6d4 100%);
+  padding: 35px 40px;
+  width: 500px;
+  border-radius: 16px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.title p {
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  color: #ecfeff;
+  margin-bottom: 10px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 20px;
+}
+
+.logo img {
+  width: 130px;
+  max-width: 80%;
+  height: auto;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.3));
+}
+
+.forget-password {
+  font-size: 14px;
+  color: blue;
+  cursor: pointer;
+  text-align: right;
+  opacity: 0.9;
+}
+
+.forget-password:hover {
+  text-decoration: underline;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 12px;
+  top: 72%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #000000;
+  font-size: 18px;
+}
+
+.eye-icon:hover {
+  color: #111111;
+}
+
+.login-btn button,
+.signup-btn button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #22d3ee, #0ea5e9);
+  color: #022c22;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.login-btn button:hover,
+.signup-btn button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(34, 211, 238, 0.5);
+}
+
+.text {
+  text-align: center;
+}
+
+.text p:nth-child(1) {
+  font-size: 14px;
+  color: rgb(244, 241, 241);
+}
+
+.text span {
+  color: blue;
+  cursor: pointer;
+  font-weight: 500;
+  padding-left: 6px;
+}
+
+.text span:hover {
+  text-decoration: underline;
+}
+
+/* hide native password reveal icons to avoid double eyes */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+
+input[type="password"]::-webkit-credentials-auto-fill-button,
+input[type="password"]::-webkit-inner-spin-button,
+input[type="password"]::-webkit-outer-spin-button {
+  display: none;
+  margin: 0;
+}
+.google-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: -10px;
+}
+
+/* "OR" text */
+.google-logo p {
+  font-size: 14px;
+  color: #ccfbf1; /* light cyan */
+  margin: 0;
+}
+
+/* Google button */
+.google-img {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 10px;
+  padding: 12px 0;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+.google-img:hover {
+  background: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(34, 211, 238, 0.35);
+}
+
+/* Button text */
+.google-img p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #0f766e; /* teal text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Google icon */
+.google-img img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .container form {
+    width: 90%;
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  .container form {
+    width: 100%;
+    padding: 25px 18px;
+    gap: 20px;
+  }
+
+  .title p {
+    font-size: 20px;
+  }
+
+  .logo img {
+    width: 110px;
+  }
+
+  .login-btn button,
+  .signup-btn button {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .forget-password {
+    font-size: 13px;
+  }
+
+  .text p {
+    font-size: 13px;
+  }
+
+  .google-logo p {
+    font-size: 12px;
+  }
+
+  .google-img p {
+    font-size: 13px;
+  }
+
+  .google-img img {
+    width: 30px;
+    height: 30px;
+  }
+}

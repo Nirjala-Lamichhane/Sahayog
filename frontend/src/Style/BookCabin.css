@@ -1,0 +1,156 @@
+/* Cabin booking page styling */
+.cabin-hero {
+  min-height: 100vh;
+  background: 
+    linear-gradient(135deg, rgba(240, 249, 255, 0.95), rgba(243, 232, 255, 0.95)),
+    url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1600&q=85');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 16px;
+}
+
+.cabin-panel {
+  width: min(1100px, 100%);
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+}
+
+@media (max-width: 960px) {
+  .cabin-panel {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cabin-content {
+  padding: 32px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.cabin-content h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+  color: #0f172a;
+}
+
+.cabin-content p {
+  color: #475569;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.cabin-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.cabin-chip {
+  background: #ecfeff;
+  border: 1px solid #cffafe;
+  color: #0f766e;
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cabin-form {
+  padding: 32px;
+  background: #0b1727;
+  color: #e2e8f0;
+}
+
+.cabin-form h2 {
+  margin-bottom: 20px;
+  color: #e2e8f0;
+}
+
+.cabin-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 720px) {
+  .cabin-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cabin-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cabin-field label {
+  font-weight: 600;
+  color: #cbd5e1;
+}
+
+.cabin-field input,
+.cabin-field select,
+.cabin-field textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #1e293b;
+  background: #0f172a;
+  color: #e2e8f0;
+  outline: none;
+}
+
+.cabin-field textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.cabin-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.cabin-primary {
+  flex: 1;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #22d3ee 0%, #0ea5e9 60%, #0284c7 100%);
+  color: #0b1727;
+  font-weight: 800;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cabin-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(14, 165, 233, 0.35);
+}
+
+.cabin-secondary {
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: 1px solid #1f2937;
+  background: transparent;
+  color: #cbd5e1;
+  cursor: pointer;
+}
+
+.helper-text {
+  font-size: 13px;
+  color: #94a3b8;
+}
