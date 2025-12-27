@@ -12,7 +12,7 @@
   padding: 20px;
 }
 .container form {
-  background: #e8fbff;
+  background: linear-gradient(135deg, #0d9488 0%, #14b8a6 50%, #06b6d4 100%);
   padding: 35px 40px;
   width: 500px;
   border-radius: 14px;
