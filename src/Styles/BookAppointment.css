@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+.container{
+/* background: linear-gradient(135deg, #dfe9f3, #aac4e6); */
+ background: linear-gradient(135deg, #0d9488 0%, #14b8a6 50%, #06b6d4 100%);
+height: 590px;
+
+}
+
+.appointment-wrapper {
+  max-height: fit-content;
+  width: 100%;
+  /* background: linear-gradient(135deg, #dfe9f3, #aac4e6); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  margin-top: 50px;
+}
+
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+
+}
+
+.left{
+  display: flex;
+ gap: 14px;
+ align-items: center;
+  
+}
+
+.header h2 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1c2b4a;
+  text-align: center;
+  flex: 1;
+}
+
+.back-arrow {
+  font-size: 32px;
+  cursor: pointer;
+  padding-left: 12px;
+ 
+}
+
+.header-icons span {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+
+.form-card {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+
+.form-group {
+  margin-bottom: 14px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  background: #f9f9f9;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #1f4fd8;
+  background: #fff;
+}
+
+.book-btn {
+  width: 100%;
+  margin-top: 12px;
+  padding: 14px;
+  background: #1246b3;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.book-btn:hover {
+  background: #0d3790;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 480px) {
+  .header h2 {
+    font-size: 14px;
+  }
+
+  .form-card {
+    padding: 16px;
+  }
+
+  .form-group input {
+    padding: 11px;
+    font-size: 13px;
+  }
+
+  .book-btn {
+    font-size: 15px;
+    padding: 13px;
+  }
+}
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .header h2 {
+    font-size: 15px;
+  }
+
+  .form-card {
+    padding: 18px;
+  }
+}
+
+
+@media (min-width: 769px) {
+  .appointment-wrapper {
+    justify-content: center;
+  }
+
+  .header h2 {
+    font-size: 17px;
+  }
+
+  .form-card {
+    padding: 22px;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .form-card {
+    max-width: 460px;
+  }
+}
