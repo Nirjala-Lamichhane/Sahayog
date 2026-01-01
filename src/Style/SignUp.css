@@ -1,4 +1,4 @@
-.google-logo {
+/* .google-logo {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,5 +40,56 @@
 .google-img img {
   width: 40px;
   height: 30px;
+  object-fit: contain;
+} */
+.google-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: -10px;
+}
+
+/* "OR" text */
+.google-logo p {
+  font-size: 14px;
+  color: #ccfbf1; /* light cyan */
+  margin: 0;
+}
+
+/* Google button */
+.google-img {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 10px;
+  padding: 12px 0;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+.google-img:hover {
+  background: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(34, 211, 238, 0.35);
+}
+
+/* Button text */
+.google-img p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #0f766e; /* teal text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Google icon */
+.google-img img {
+  width: 34px;
+  height: 34px;
   object-fit: contain;
 }
