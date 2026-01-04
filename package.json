@@ -1,0 +1,12 @@
+{
+  "name": "sahayog-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "cd SAHAYOG && npm run dev",
+    "build": "cd SAHAYOG && npm run build",
+    "lint": "cd SAHAYOG && npm run lint",
+    "preview": "cd SAHAYOG && npm run preview"
+  }
+}
+
