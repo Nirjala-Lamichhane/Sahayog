@@ -30,3 +30,4 @@ app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
 
+// timro ma code -> push shubhi -> cheout master -> merge subhi -> conflict ayye solve  ->push master
