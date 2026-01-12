@@ -20,9 +20,21 @@ const BookAppointment = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleBook = () => {
-    // Navigate to details page with state
-    navigate("/appointment-detail", { state: formData });
+  const handleBook = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await fetch('/api/appointments', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      if (!res.ok) throw new Error('Failed to book appointment');
+      const appointment = await res.json();
+      navigate('/appointment-detail', { state: appointment });
+    } catch (err) {
+      // Minimal error handling; in future show UI message
+      console.error(err);
+    }
   };
 
   return (
