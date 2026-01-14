@@ -1,0 +1,314 @@
+/* Main container */
+.departments-page {
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+/* Hero section */
+.hero {
+  background-color: #0d9488;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 20px;
+  color: #99f6e4;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 20px;
+}
+
+/* Department cards grid */
+.departments-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.dept-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+}
+
+.dept-card:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+.dept-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.dept-card h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.dept-card p {
+  color: #4b5563;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.dept-stats {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.dept-stats span {
+  font-weight: 600;
+}
+
+.view-details-btn {
+  color: #0d9488;
+  font-weight: 600;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.view-details-btn:hover {
+  color: #0f766e;
+}
+
+.view-details-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 8px;
+  max-width: 700px;
+  width: 100%;
+  padding: 32px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.modal-title-section .modal-icon {
+  font-size: 48px;
+  margin-bottom: 8px;
+}
+
+.modal-title-section h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #111827;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #9ca3af;
+  padding: 0;
+}
+
+.close-btn:hover {
+  color: #4b5563;
+}
+
+.close-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+.modal-description {
+  color: #4b5563;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+/* Services section in modal */
+.services-section h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+  color: #374151;
+}
+
+.service-item svg {
+  width: 20px;
+  height: 20px;
+  color: #0d9488;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+/* Stats box in modal */
+.stats-box {
+  background-color: #f9fafb;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.stat-item .stat-number {
+  font-size: 30px;
+  font-weight: bold;
+  color: #0d9488;
+}
+
+.stat-item .stat-label {
+  color: #4b5563;
+}
+
+/* Book appointment button */
+.book-btn {
+  width: 100%;
+  background-color: #0d9488;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.book-btn:hover {
+  background-color: #0f766e;
+}
+
+/* Features section */
+.features-section {
+  background-color: white;
+  padding: 64px 20px;
+}
+
+.features-section h2 {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  color: #111827;
+  margin-bottom: 48px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.feature-card {
+  text-align: center;
+  padding: 24px;
+}
+
+.feature-icon {
+  width: 64px;
+  height: 64px;
+  background-color: #ccfbf1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.feature-icon svg {
+  width: 32px;
+  height: 32px;
+  color: #0d9488;
+}
+
+.feature-card h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.feature-card p {
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .departments-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+  
+  .departments-grid,
+  .features-grid,
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .modal-content {
+    padding: 24px;
+  }
+}

@@ -1,0 +1,207 @@
+/* Main container styles */
+.about-page {
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+/* Hero section at the top */
+.hero {
+  background-color: #0d9488;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 20px;
+  color: #99f6e4;
+}
+
+/* Container to center content */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 20px;
+}
+
+/* Mission section with two columns */
+.mission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.mission-content h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 24px;
+}
+
+.mission-content p {
+  font-size: 18px;
+  color: #374151;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+/* Updated: Now displays real image properly */
+.mission-image {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.mission-image img {
+  width: 100%;
+  height: 400px;           /* Fixed height for consistency */
+  object-fit: cover;       /* Crops nicely without distortion */
+  display: block;
+}
+
+/* Values section */
+.values-section {
+  background-color: white;
+  padding: 64px 20px;
+}
+
+.values-section h2 {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  color: #111827;
+  margin-bottom: 48px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.value-card {
+  text-align: center;
+  padding: 24px;
+}
+
+.value-card h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.value-card p {
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+/* Stats section */
+.stats-section {
+  background-color: #0d9488;
+  color: white;
+  padding: 64px 20px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stat-number {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  color: #99f6e4;
+  font-size: 18px;
+}
+
+/* Team section */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.team-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Updated: Real team member photos */
+.team-image {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.team-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* Ensures professional portrait fill */
+  transition: transform 0.3s ease;
+}
+
+.team-image img:hover {
+  transform: scale(1.05);  /* Nice subtle zoom on hover */
+}
+
+.team-info {
+  padding: 24px;
+}
+
+.team-info h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.team-role {
+  color: #0d9488;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.team-bio {
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+/* Responsive design for tablets and phones */
+@media (max-width: 768px) {
+  .mission-grid,
+  .values-grid,
+  .stats-grid,
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-image img {
+    height: 300px;
+  }
+
+  .team-image {
+    height: 250px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+}
