@@ -1,0 +1,55 @@
+.home-container {
+  min-height: 100vh;
+  background: #f4f7fb;
+}
+
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #0d9488;
+}
+
+.home-header img {
+  height: 45px;
+}
+
+.home-header button {
+  background: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.home-content {
+  padding: 40px;
+  text-align: center;
+}
+
+.user-card {
+  margin: 20px auto;
+  padding: 20px;
+  width: 320px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.home-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.home-actions button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background: #0d9488;
+  color: white;
+  cursor: pointer;
+}

@@ -1,0 +1,208 @@
+/* Container */
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(13, 148, 136, 0.85), rgba(6, 182, 212, 0.85)),
+    url('https://images.pexels.com/photos/4230617/pexels-photo-4230617.jpeg');
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Form */
+.signup-form {
+  background: linear-gradient(135deg, #0d9488 0%, #14b8a6 50%, #06b6d4 100%);
+  padding: 35px 40px;
+  width: 500px;
+  border-radius: 16px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.logo img {
+  width: 130px;
+  max-width: 80%;
+  height: auto;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.3));
+}
+
+/* Title */
+.title {
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  color: #ecfeff;
+  margin-bottom: 10px;
+}
+
+/* Password wrapper */
+.password-wrapper {
+  position: relative;
+}
+
+/* Eye icon */
+.eye-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #e6fffa;
+  font-size: 18px;
+}
+
+.eye-icon:hover {
+  color: #ffffff;
+}
+
+/* Error text */
+.error-text {
+  color: #ff6b6b;
+  font-size: 14px;
+  text-align: center;
+  margin-top: -10px;
+}
+
+/* SignUp Button */
+.signup-form button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #22d3ee, #0ea5e9);
+  color: #022c22;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.signup-form button:hover:not(.loading) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(34, 211, 238, 0.5);
+}
+
+.signup-form button.loading {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+/* Google SignUp */
+.google-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: -5px;
+}
+
+.google-logo p {
+  font-size: 14px;
+  color: #ccfbf1;
+  margin: 0;
+}
+
+.google-img {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 10px;
+  padding: 12px 0;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.google-img:hover {
+  background: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(34, 211, 238, 0.35);
+}
+
+.google-img img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+/* Text */
+.text {
+  text-align: center;
+  font-size: 14px;
+  color: #ecfeff;
+}
+
+.text span {
+  color: #90cdf4;
+  cursor: pointer;
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+.text span:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE STYLES */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .signup-form {
+    width: 90%;
+    padding: 30px 25px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .signup-form button {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+  .signup-form {
+    width: 100%;
+    padding: 25px 20px;
+    border-radius: 12px;
+    gap: 15px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .signup-form button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .logo img {
+    width: 100px;
+  }
+
+  .eye-icon {
+    font-size: 16px;
+  }
+}
